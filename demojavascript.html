@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JavaScript</title>
+</head>
+
+<body>
+    <input type="button" onclick="alert('hello i am alert message')" value="alert button">&nbsp;
+    <input type="button" onclick="confirm('are you sure to take admission')" value="confirm button">&nbsp;
+    <input type="button" onclick="prompt('enter your name')" value="prompt button">
+
+    <input type="button" onclick="alertinternal()" value="alert button internal">&nbsp;
+    <input type="button" onclick="confirminternal()" value="confirm button internal">&nbsp;
+    <input type="button" onclick="promptinternal()" value="prompt button internal">
+
+    <input type="button" onclick="green()" value="alert button external" id="b1">&nbsp;
+    <input type="button" onclick="red()" value="confirm button external" id="b2">&nbsp;
+    <input type="button" onclick="blue()" value="prompt button external" id="b3">
+    <script src="demo.js"></script>
+    <script>
+        function alertinternal() {
+            alert("internal-alert.");
+        }
+        function confirminternal() {
+            if (confirm("are you sure....??")) {
+                alert("yes");
+            }
+            else {
+                alert("failure");
+            }
+        }
+        function promptinternal() {
+            let fname = prompt("enter you firstname");
+            let lname = prompt("enter you lastname");
+            document.write(fname + "" + lname)
+        }
+    </script>
+
+</body>
+
+</html>

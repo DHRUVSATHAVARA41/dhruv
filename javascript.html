@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JavaScript</title>
+</head>
+
+<body>
+    <h2>What Can JavaScript DO?</h2>
+    <p id="demo">JavaScriptcan change HTML content...</p>
+    <button type="button" onclick="document.getElementById('demo') .innerHTML='hello JavaScript' ">Click Me!</button>
+    <hr>
+    <br>
+    <h1>JavaScript Variables</h1>
+    <br>
+    <p id="varjs">Create a Variable,assign a value to iy, Animateddiaplay it:</p><br><hr>
+    <button onclick="func()">display</button>
+    <script>
+        var carname = "BMW";
+        document.getElementById('varjs').innerHTML = carname;
+
+        function func(){
+            let number=1;
+            for(number;number<=10;number++){
+                document.write(number)
+            }
+        }
+ 
+    </script>
+</body>
+
+</html>
