@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnshow").attr("disabled", true);
+            $("#btnhide").click(function () {
+                if (confirm("are you sure..??")) {
+                    $("#mydiv").hide(3000);
+                    $(this).attr("disabled", true);
+                    $("#btnshow").attr("disabled", false);
+                    $("#btntoggle").text("show");
+
+                }
+            });
+            $("#btnshow").click(function () {
+                if (confirm("are you sure..??")) {
+                    $("#mydiv").show(3000);
+                    $(this).attr("disabled", true);
+                    $("#btnhide").attr("disabled", false);
+                    $("#btntoggle").text("hide");
+                }
+            });
+            $("#btntoggle").click(function () {
+                if (confirm("are you sure..??")) {
+                    $("#mydiv").toggle(3000);
+                    ($(this).text() == "hide")
+                        ? ($(this).text("show"), $("#btnhide").attr("disabled", true), $("#btnshow").attr("disabled", false))
+                        : ($(this).text("hide"), $("#btnhide").attr("disabled", false), $("#btnshow").attr("disabled", true))
+                }
+            });
+            $("#btnplus").click(function () {
+                var MDH = parseInt($("#mydiv").css("height"));
+                if (MDH <= 500) {
+                    MDH += 10;
+                    $("#mydiv").css("height", MDH);
+                    $("#mydiv").css("width", MDH);
+                }
+                else {
+                    alert("More than 500px is not possible");
+                }
+            });
+            $("#btnplus1").click(function () {
+                var MDH = parseInt($("#mydiv").css("height"));
+                if (MDH >= 20) {
+                    MDH -= 10;
+                    $("#mydiv").css("height", MDH);
+                    $("#mydiv").css("width", MDH);
+                }
+                else {
+                    alert("less than 20px is not possible");
+                }
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="mydiv" style="width: 300px;height: 300px; background-color:aquamarine;"></div>
+    <hr>
+    <button id="btnhide">Hide</button>&nbsp;&nbsp;<button id="btnshow">show</button>
+    <hr>
+    <button id="btntoggle">Hide</button>
+    <hr>
+    <button id="btnplus" style="font-size:xx-large"><b>+</b></button>&nbsp;&nbsp;<button id="btnplus1"
+        style="font-size:xx-large;"><b>-</b></button>
+
+</body>
+
+</html>

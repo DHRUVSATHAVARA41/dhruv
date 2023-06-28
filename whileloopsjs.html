@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whileloop</title>
+</head>
+
+<body>
+    <h2>JavaScript While Loop</h2>
+    <p id="demo"></p>
+        <script>
+        let text = ""
+        let i = 1;
+        while (i <= 10) {
+            text += "<br> The Number is" + i;
+            i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    <h2>JavaScript whileloop arary</h2>
+    <p id="demo2"></p>
+
+    <script>
+        const cars=["bmw","thar","mahindra","audi"];
+
+        let i=0;
+        let text="";
+        while(cars[i]){
+            text+=cars[i]+"<br>";
+            i++;
+        }
+        document.getElementById("demo2").innerHTML=text;
+    </script>
+</body>
+
+</html>
